@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "75866166956",
+    "firebase_url": "https://don-solidario-app-264f8-default-rtdb.firebaseio.com",
+    "project_id": "don-solidario-app-264f8",
+    "storage_bucket": "don-solidario-app-264f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75866166956:android:80fc76059f0edf14573109",
+        "android_client_info": {
+          "package_name": "com.example.donsolidario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75866166956-7k2mhtlkrutv5p57g0hf7hjc485qj32d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByegTV3Ru85TwW2spMUleVIlevpMo-iZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75866166956-7k2mhtlkrutv5p57g0hf7hjc485qj32d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75866166956:android:3dca57a82aba63b9573109",
+        "android_client_info": {
+          "package_name": "com.example.tasktodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75866166956-7k2mhtlkrutv5p57g0hf7hjc485qj32d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByegTV3Ru85TwW2spMUleVIlevpMo-iZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75866166956-7k2mhtlkrutv5p57g0hf7hjc485qj32d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

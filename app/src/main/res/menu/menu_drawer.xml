@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigationView">
+
+    <group
+        android:id="@+id/mainGroup"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/main"
+            android:title="Main"
+            android:icon="@mipmap/icon_home"/>
+
+    </group>
+
+    <group
+        android:visible="false"
+        android:id="@+id/groupCalendar"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/checkCases"
+            android:title="Calendario"
+            android:icon="@mipmap/icon_profile"/>
+
+    </group>
+
+    <group
+        android:id="@+id/groupCreateEvent"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/create_cases"
+            android:title="Crear evento"
+            android:icon="@mipmap/icon_create_case"/>
+
+    </group>
+
+    <group
+        android:id="@+id/logout"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/logout_session"
+            android:title="Cerrar sesión"
+            android:icon="@mipmap/icon_logout"/>
+
+    </group>
+
+</menu>
