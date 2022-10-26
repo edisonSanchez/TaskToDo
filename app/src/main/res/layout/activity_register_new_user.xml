@@ -36,7 +36,7 @@
                 android:textAlignment="textStart"
                 android:hint="Nombre"
                 android:background="@color/white"
-                android:layout_margin="32dp"
+                android:layout_margin="@dimen/large_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -51,9 +51,9 @@
                 android:id="@+id/surnames"
                 android:hint="Apellido"
                 android:background="@color/white"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
                 android:textAlignment="textStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -78,17 +78,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contentTypeDocument"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/typeDocument"
-                android:hint="Tipo de documento"
-                android:background="@color/white"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="32dp"
-                android:textAlignment="textStart"
+            <Spinner
+                android:id="@+id/fieldTypeDocument"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -103,9 +101,9 @@
                 android:background="@color/white"
                 android:hint="Numero de documento"
                 android:inputType="number"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
                 android:textAlignment="textStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -119,10 +117,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/dateBirthday"
                 android:background="@color/white"
+                android:focusable="false"
+                android:clickable="true"
                 android:hint="Fecha de nacimiento"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginBottom="32dp"
+                android:layout_marginStart="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
                 android:textAlignment="textStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
@@ -204,10 +204,10 @@
         <Button
             android:id="@+id/btnRegister"
             android:text="Registrarse"
-            android:padding="16dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
+            android:padding="@dimen/medium_margin"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginBottom="@dimen/large_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 

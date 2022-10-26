@@ -1,15 +1,16 @@
 package com.example.tasktodo.ui.viewmodel
 
+import android.widget.Spinner
 import androidx.lifecycle.ViewModel
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class RegisterNewUserViewModel : ViewModel() {
 
-
     fun validateFields(names: TextInputEditText, surnames: TextInputEditText, nationality: TextInputEditText,
-        documentType: TextInputEditText, numberDocument: TextInputEditText, dateBirthday: TextInputEditText,
-        numberCellphone: TextInputEditText, email: TextInputEditText, password: TextInputEditText,
-        repeatPassword: TextInputEditText) : Boolean {
+                       valueDocumentType: String, documentType: TextInputLayout, numberDocument: TextInputEditText,
+                       dateBirthday: TextInputEditText, numberCellphone: TextInputEditText, email: TextInputEditText,
+                       password: TextInputEditText, repeatPassword: TextInputEditText) : Boolean {
         var isValidate = true
         val validateFields: ArrayList<Boolean> = ArrayList()
         if(names.text.toString().isEmpty()){
@@ -36,7 +37,7 @@ class RegisterNewUserViewModel : ViewModel() {
             validateFields.add(true)
         }
 
-        if(documentType.text.toString().isEmpty()){
+        if(valueDocumentType.isEmpty()){
             documentType.error = "Este campo es obligatorio"
             documentType.requestFocus()
             validateFields.add(false)
@@ -70,6 +71,10 @@ class RegisterNewUserViewModel : ViewModel() {
 
         if(email.text.toString().isEmpty()){
             email.error = "Este campo es obligatorio"
+            email.requestFocus()
+            validateFields.add(false)
+        }else if(!email.text.toString().contains("@")){
+            email.error = "El correo digitado no es valido"
             email.requestFocus()
             validateFields.add(false)
         }else{

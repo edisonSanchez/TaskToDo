@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.CreateEventActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/actionBar"
+            android:background="@color/clear_blue"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:text="Crear evento"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+<!--                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:text="Imagen del evento:"
+                    android:textColor="@color/black" />-->
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/large_margin"
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:cardCornerRadius="@dimen/large_margin"
+                    app:cardElevation="@dimen/medium_margin">
+
+                    <ImageView
+                        android:id="@+id/imageEvent"
+                        android:src="@drawable/icon_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fieldNameEvent"
+                        android:background="@color/white"
+                        android:hint="Nombre del evento"
+                        android:layout_margin="@dimen/large_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fieldHour"
+                        android:background="@color/white"
+                        android:focusable="false"
+                        android:hint="Hora del evento"
+                        android:layout_marginStart="@dimen/large_margin"
+                        android:layout_marginEnd="@dimen/large_margin"
+                        android:layout_marginBottom="@dimen/large_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:text="Dias"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkboxMonday"
+                        android:layout_width="95dp"
+                        android:text="Lunes"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/checkboxTuesday"
+                        android:layout_marginStart="@dimen/marge_check_box"
+                        android:layout_width="95dp"
+                        android:text="Martes"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/checkboxWednesday"
+                        android:layout_marginStart="@dimen/marge_check_box"
+                        android:layout_width="95dp"
+                        android:text="Miercoles"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkboxThursday"
+                        android:layout_width="95dp"
+                        android:text="Jueves"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/checkboxFriday"
+                        android:layout_marginStart="@dimen/marge_check_box"
+                        android:layout_width="95dp"
+                        android:text="Viernes"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/checkboxSaturday"
+                        android:layout_marginStart="@dimen/marge_check_box"
+                        android:layout_width="95dp"
+                        android:text="Sabado"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/large_margin"
+                    android:layout_marginEnd="@dimen/large_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/checkboxSunday"
+                        android:layout_width="95dp"
+                        android:text="Domingo"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:id="@+id/checkboxAll"
+                        android:layout_marginStart="@dimen/marge_check_box"
+                        android:layout_width="95dp"
+                        android:text="Todos"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCreateEvent"
+                    android:text="Crear Evento"
+                    android:padding="@dimen/medium_margin"
+                    android:layout_margin="@dimen/large_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/backgroundProgress"
+        android:background="@color/white"
+        android:alpha="0.6"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

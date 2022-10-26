@@ -7,36 +7,43 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tasktodo.R
 
-class RecyclerViewCasesAdapter(private var context: Context, private var cases: ArrayList<Case>) : RecyclerView.Adapter<RecyclerViewCasesAdapter.CaseViewHolder>() {
+class RecyclerViewEventAdapter(private var context: Context, private var events: ArrayList<Event>)
+    : RecyclerView.Adapter<RecyclerViewEventAdapter.EventViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CaseViewHolder {
-       return CaseViewHolder(LayoutInflater.from(context).inflate(R.layout.item_cases, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
+       return EventViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recycler_view_events,
+           parent, false))
     }
 
-    override fun onBindViewHolder(holder: CaseViewHolder, position: Int) {
-        val currentCase = cases[position]
-        holder.title.text = currentCase.title
-        holder.description.text = currentCase.description
-        holder.buttonDonate.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("https://ui.pse.com.co/ui/")
-            context.startActivity(intent)
+    override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
+        val currentEvent = events[position]
+        holder.nameEvent.text = currentEvent.name
+        holder.buttonDelete.setOnClickListener {
+            deleteEvent(currentEvent, position)
         }
+        holder.imageEvent.setImageURI(Uri.fromFile(currentEvent.image))
     }
 
     override fun getItemCount(): Int {
-        return cases.size
+        return events.size
     }
 
-    inner class CaseViewHolder(view: View) : RecyclerView.ViewHolder(view){
+    private fun deleteEvent(event: Event, position: Int){
+        events.remove(event)
+        notifyItemRemoved(position)
+    }
 
-        val title: TextView = view.findViewById(R.id.titleCase)
-        val description: TextView = view.findViewById(R.id.descriptionCase)
-        val buttonDonate: Button = view.findViewById(R.id.buttonDonate)
+    inner class EventViewHolder(view: View) : RecyclerView.ViewHolder(view){
+
+        val buttonDelete: ImageButton = view.findViewById(R.id.btnDelete)
+        val imageEvent: ImageView = view.findViewById(R.id.imageEvent)
+        val nameEvent : TextView = view.findViewById(R.id.nameOfEvent)
 
     }
 

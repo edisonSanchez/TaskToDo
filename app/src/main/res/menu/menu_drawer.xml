@@ -9,31 +9,19 @@
 
         <item
             android:id="@+id/main"
-            android:title="Main"
+            android:title="Eventos"
             android:icon="@mipmap/icon_home"/>
 
     </group>
 
     <group
-        android:visible="false"
         android:id="@+id/groupCalendar"
         android:checkableBehavior="single">
 
         <item
-            android:id="@+id/checkCases"
+            android:id="@+id/calendar"
             android:title="Calendario"
-            android:icon="@mipmap/icon_profile"/>
-
-    </group>
-
-    <group
-        android:id="@+id/groupCreateEvent"
-        android:checkableBehavior="single">
-
-        <item
-            android:id="@+id/create_cases"
-            android:title="Crear evento"
-            android:icon="@mipmap/icon_create_case"/>
+            android:icon="@drawable/icon_calendar"/>
 
     </group>
 
